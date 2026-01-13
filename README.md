@@ -30,33 +30,61 @@
 
 ---
 
+### 3. hap-mcp-usage
+明道云 HAP MCP 使用指南技能。
+
+**功能特性：**
+- 理解两种 HAP MCP 的区别
+- API 文档 MCP 使用指导
+- 应用执行 MCP 使用指导
+- MCP 配置和安全提示
+
+[查看详情](./hap-mcp-usage/) | [下载 ZIP](../../releases)
+
+---
+
+### 4. hap-as-database
+使用明道云 HAP 作为数据库搭建独立网站的技能。
+
+**功能特性：**
+- HAP + 前端项目架构指导
+- API 集成和数据渲染
+- 企业官网/CMS 系统搭建
+- 部署到生产环境
+
+[查看详情](./hap-as-database/) | [下载 ZIP](../../releases)
+
+---
+
 ## 🚀 安装方法
 
-> **📖 完整安装使用指南**: [USER-INSTALLATION-GUIDE.md](./USER-INSTALLATION-GUIDE.md)
+### 方法一：通过 ZIP 安装（推荐）
 
-### 快速安装（推荐）
-
-1. 从 [Releases](https://github.com/garfield-bb/HAP-Skills-Public/releases) 下载 ZIP 文件
+1. 从 [Releases](../../releases) 下载对应的 skill ZIP 文件
 2. 解压到 `~/.claude/skills/` 目录
 
 ```bash
 cd ~/.claude/skills/
 unzip ~/Downloads/hap-view-plugin.zip
 unzip ~/Downloads/hap-v3-api.zip
+unzip ~/Downloads/hap-mcp-usage.zip
+unzip ~/Downloads/hap-as-database.zip
 ```
 
-### 其他安装方式
+### 方法二：通过 Git Clone
 
 ```bash
-# 方法二：Git Clone
 cd ~/.claude/skills/
-git clone https://github.com/garfield-bb/HAP-Skills-Public.git temp
+git clone https://github.com/YOUR-USERNAME/HAP-Skills-Public.git temp
 cp -r temp/hap-view-plugin ./
 cp -r temp/hap-v3-api ./
 rm -rf temp
+```
 
-# 方法三：符号链接（开发者）
-git clone https://github.com/garfield-bb/HAP-Skills-Public.git ~/HAP-Skills-Public
+### 方法三：符号链接（开发者）
+
+```bash
+git clone https://github.com/YOUR-USERNAME/HAP-Skills-Public.git ~/HAP-Skills-Public
 ln -s ~/HAP-Skills-Public/hap-view-plugin ~/.claude/skills/
 ln -s ~/HAP-Skills-Public/hap-v3-api ~/.claude/skills/
 ```

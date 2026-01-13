@@ -5,6 +5,18 @@
 格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/)，
 版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
+## [1.1.0] - 2026-01-13
+
+### 新增
+- hap-mcp-usage skill：HAP MCP 使用指南技能
+- hap-as-database skill：使用 HAP 作为数据库搭建网站的技能
+- 用户安装使用指南 (USER-INSTALLATION-GUIDE.md)
+- 用户使用流程图 (USER-FLOW-DIAGRAM.md)
+
+### 文档
+- 更新 README.md 包含所有 4 个 skills
+- 添加安装方法说明
+
 ## [1.0.0] - 2024-01-13
 
 ### 新增
