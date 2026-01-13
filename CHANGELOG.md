@@ -13,9 +13,17 @@
 - 用户安装使用指南 (USER-INSTALLATION-GUIDE.md)
 - 用户使用流程图 (USER-FLOW-DIAGRAM.md)
 
+### 多平台支持
+- ✅ Cursor 适配版本 (.cursor-compatible/)
+- ✅ Windsurf 适配版本 (.windsurf-compatible/)
+- ✅ GitHub Copilot 适配版本 (.github-copilot-compatible/)
+- ✅ 通用格式版本 (.universal-compatible/)
+- 📚 详细的多平台适配指南 (MULTI-PLATFORM-GUIDE.md)
+
 ### 文档
 - 更新 README.md 包含所有 4 个 skills
-- 添加安装方法说明
+- 添加多平台支持说明和安装方法
+- 每个平台都有独立的 README 和使用说明
 
 ## [1.0.0] - 2024-01-13
 

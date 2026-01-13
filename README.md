@@ -7,15 +7,15 @@
 
 ## 🤖 支持的 AI 产品
 
-| AI 编程助手 | 安装路径 | 状态 |
-|------------|---------|------|
-| **Claude Code** | `~/.claude/skills/` | ✅ 完全支持 |
-| **Cursor** | `.cursor/rules/` | 🔄 适配中 |
-| **Windsurf** | `.windsurf/rules/` | 🔄 适配中 |
-| **GitHub Copilot** | `.github/prompts/` | 📋 计划中 |
-| **其他产品** | - | 📋 欢迎贡献 |
+| AI 编程助手 | 安装路径 | 状态 | 获取方式 |
+|------------|---------|------|---------|
+| **Claude Code** | `~/.claude/skills/` | ✅ 完全支持 | [下载 ZIP](../../releases) |
+| **Cursor** | `.cursor/rules/` | ✅ 可用 | [查看说明](./.cursor-compatible/) |
+| **Windsurf** | `.windsurf/rules/` | ✅ 可用 | [查看说明](./.windsurf-compatible/) |
+| **GitHub Copilot** | `.github/prompts/` | ✅ 可用 | [查看说明](./.github-copilot-compatible/) |
+| **其他产品** | - | ✅ 通用格式 | [查看说明](./.universal-compatible/) |
 
-> 💡 **当前版本**：所有 skills 已针对 **Claude Code** 优化，可直接使用自动触发和 YAML 元数据功能。其他平台的适配正在进行中。
+> 💡 **当前版本**：已支持 **Claude Code**（完全支持）、**Cursor**、**Windsurf**、**GitHub Copilot** 及其他 AI 产品。每个平台都有对应的适配版本和使用说明。
 
 ## 📦 可用 Skills
 
@@ -133,92 +133,115 @@ Claude：我看到你需要开发 HAP 视图插件，让我使用 hap-view-plugi
 </details>
 
 <details>
-<summary><b>🟣 Cursor（适配中）</b></summary>
+<summary><b>🟣 Cursor（可用）</b></summary>
 
-> ⚠️ 当前 Cursor 适配正在开发中。你可以先将内容复制到 `.cursor/rules/` 作为自定义规则使用。
+> ✅ Cursor 适配版本已就绪！直接使用即可。
 
-#### 临时使用方法
+#### 快速安装
 
-1. 克隆仓库：
 ```bash
+# 克隆仓库
 git clone https://github.com/garfield-bb/HAP-Skills-Public.git ~/HAP-Skills-Public
+
+# 复制到项目
+mkdir -p .cursor/rules
+cp ~/HAP-Skills-Public/.cursor-compatible/rules/*.md .cursor/rules/
 ```
 
-2. 创建 Cursor 规则目录：
-```bash
-mkdir -p .cursor/rules/
+#### 使用方法
+
+在 Cursor 中使用 @ 引用规则文件：
+
+```
+@hap-view-plugin.md 帮我开发一个 HAP 甘特图插件
 ```
 
-3. 复制 SKILL.md 内容到规则文件：
-```bash
-cp ~/HAP-Skills-Public/hap-view-plugin/SKILL.md .cursor/rules/hap-view-plugin.md
-cp ~/HAP-Skills-Public/hap-v3-api/SKILL.md .cursor/rules/hap-v3-api.md
-cp ~/HAP-Skills-Public/hap-mcp-usage/SKILL.md .cursor/rules/hap-mcp-usage.md
-cp ~/HAP-Skills-Public/hap-as-database/SKILL.md .cursor/rules/hap-as-database.md
-```
-
-4. 在 Cursor 中，需要手动引用规则文件或将内容添加到 `.cursorrules` 文件中
-
-**注意**：Cursor 不支持 YAML 元数据自动触发，需要手动提及规则内容。
+详细说明：[.cursor-compatible/README.md](./.cursor-compatible/README.md)
 
 </details>
 
 <details>
-<summary><b>🔷 Windsurf（适配中）</b></summary>
+<summary><b>🔷 Windsurf（可用）</b></summary>
 
-> ⚠️ 当前 Windsurf 适配正在开发中。你可以先将内容复制到 `.windsurf/rules/` 作为自定义规则使用。
+> ✅ Windsurf 适配版本已就绪！直接使用即可。
 
-#### 临时使用方法
+#### 快速安装
 
-1. 克隆仓库：
 ```bash
+# 克隆仓库
 git clone https://github.com/garfield-bb/HAP-Skills-Public.git ~/HAP-Skills-Public
+
+# 复制到项目
+mkdir -p .windsurf/rules
+cp ~/HAP-Skills-Public/.windsurf-compatible/rules/*.md .windsurf/rules/
 ```
 
-2. 创建 Windsurf 规则目录：
-```bash
-mkdir -p .windsurf/rules/
+#### 使用方法
+
+在 Windsurf 中提及规则名称：
+
+```
+使用 hap-view-plugin 规则，帮我开发一个 HAP 甘特图插件
 ```
 
-3. 复制 SKILL.md 内容到规则文件：
-```bash
-cp ~/HAP-Skills-Public/hap-view-plugin/SKILL.md .windsurf/rules/hap-view-plugin.md
-cp ~/HAP-Skills-Public/hap-v3-api/SKILL.md .windsurf/rules/hap-v3-api.md
-cp ~/HAP-Skills-Public/hap-mcp-usage/SKILL.md .windsurf/rules/hap-mcp-usage.md
-cp ~/HAP-Skills-Public/hap-as-database/SKILL.md .windsurf/rules/hap-as-database.md
-```
-
-4. 在 Windsurf 中引用规则或将内容添加到配置文件
-
-**注意**：Windsurf 不支持 YAML 元数据自动触发，需要手动引用规则。
+详细说明：[.windsurf-compatible/README.md](./.windsurf-compatible/README.md)
 
 </details>
 
 <details>
-<summary><b>💚 GitHub Copilot（计划中）</b></summary>
+<summary><b>💚 GitHub Copilot（可用）</b></summary>
 
-> 📋 GitHub Copilot 的适配正在计划中。欢迎贡献！
+> ✅ GitHub Copilot 适配版本已就绪！直接使用即可。
 
-#### 未来支持计划
+#### 快速安装
 
-- 将 skills 转换为 `.github/prompts/` 格式
-- 适配 Copilot 的 prompt 调用机制
-- 提供 Copilot 特定的使用说明
+```bash
+# 克隆仓库
+git clone https://github.com/garfield-bb/HAP-Skills-Public.git ~/HAP-Skills-Public
 
-**感兴趣参与适配？** [提交 Issue](../../issues) 或 [参与讨论](../../discussions)
+# 复制到项目
+mkdir -p .github/copilot/prompts
+cp ~/HAP-Skills-Public/.github-copilot-compatible/prompts/*.md .github/copilot/prompts/
+```
+
+#### 使用方法
+
+在 GitHub Copilot Chat 中引用 prompt：
+
+```
+@workspace 参考 hap-view-plugin prompt，帮我开发 HAP 插件
+```
+
+详细说明：[.github-copilot-compatible/README.md](./.github-copilot-compatible/README.md)
 
 </details>
 
 <details>
-<summary><b>🌟 其他 AI 产品</b></summary>
+<summary><b>🌟 其他 AI 产品（通用格式）</b></summary>
 
-如果你使用的是其他 AI 编程助手（如 Cline、Aider、Continue 等），欢迎：
+> ✅ 通用格式版本已就绪！适用于所有 AI 编程助手。
 
-1. **尝试适配**：参考 skills 的 SKILL.md 内容，根据你的 AI 产品规则格式进行转换
-2. **分享经验**：在 [Discussions](../../discussions) 分享你的适配方法
-3. **贡献代码**：提交 Pull Request 添加新平台支持
+支持产品：**Cline**、**Aider**、**Continue**、**ChatGPT**、**Claude.ai** 等
 
-**我们欢迎社区贡献！** 🎉
+#### 快速使用
+
+```bash
+# 克隆仓库
+git clone https://github.com/garfield-bb/HAP-Skills-Public.git ~/HAP-Skills-Public
+
+# 查看通用格式文件
+ls ~/HAP-Skills-Public/.universal-compatible/
+```
+
+#### 使用方法
+
+**方式 1**：直接复制粘贴内容到 AI 对话
+
+**方式 2**：作为项目文档让 AI 读取
+
+**方式 3**：根据你的 AI 产品特定功能使用
+
+详细说明：[.universal-compatible/README.md](./.universal-compatible/README.md)
 
 </details>
 
